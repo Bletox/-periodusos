@@ -41,7 +41,7 @@ function render(elemek) {
     doc.tbody.innerHTML = rows;
 }
 
-function renderCountedValue() {
+function renderCountedValue(elemek) {
     let count = 0;
     for(let elem of elemek) {
         if(elem.allapot == 'Gáz') {

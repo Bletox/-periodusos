@@ -1,6 +1,17 @@
+/*
+* File: app.js
+* Author: Lengyel István
+* Copyright: 2026, Lengyel István
+* Group: Szoft IN
+* Date: 2026-04-29
+* Github: https://github.com/István/
+* Licenc: MIT
+*/
+
 import * as bootstrap from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
+import Swal from 'sweetalert2'
 
 const kemiaiElemek = [
   { nev: 'Hidrogén', vegyjel: 'H', rendszam: 1, atomtomeg: 1.008, allapot: 'Gáz' },
@@ -15,7 +26,19 @@ const kemiaiElemek = [
 
 const doc = {
     tbody: document.querySelector('#tbody'),
-    resultDiv: document.querySelector('#result')
+    resultDiv: document.querySelector('#result'),
+    aboutButton: document.querySelector('#aboutButton')
+}
+
+doc.aboutButton.addEventListener('click', () => {
+    startAbout()
+})
+
+function startAbout() {
+    Swal.fire({
+        title: 'Névjegy',
+        text: 'Lengyel István, IN, 2026-04-29',
+    })
 }
 
 function render(elemek) {
